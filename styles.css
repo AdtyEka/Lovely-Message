@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+.envelope {
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border: 2px solid #ff6b6b;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.5s;
+    perspective: 1000px;
+}
+
+.envelope::before {
+    content: '💌';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+
+.envelope:hover {
+    transform: scale(1.1) rotateY(20deg);
+}
+
+#message-container {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 15px;
+}
+
+.flower {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.love-message {
+    color: #ff6b6b;
+    line-height: 1.6;
+}
